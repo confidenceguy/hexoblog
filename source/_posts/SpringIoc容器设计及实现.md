@@ -7,7 +7,7 @@ tags:
     - java
 categories: spring
 keywords: spring
-cover: https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
+cover: https://s1.ax1x.com/2020/09/30/0uyH3V.png
 ---
 
 {% note primary no-icon %}

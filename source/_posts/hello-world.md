@@ -1,7 +1,7 @@
 ---
 title: Hello World
 comments: false
-cover: https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
+cover: https://s1.ax1x.com/2020/09/30/0usnZd.jpg
 top: true
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
