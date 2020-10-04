@@ -19,7 +19,7 @@ cover: https://s1.ax1x.com/2020/09/30/0urLGV.jpg
 
 create-react-app 自动创建的项目是基于 Webpack + ES6 
 
-```
+```javascript
 $ npm install -g create-react-app
 $ create-react-app reactstudy
 $ cd reactstudy/
@@ -32,7 +32,7 @@ manifest.json 指定了开始页面 index.html，一切的开始都从这里开�
 
 换成淘宝的资源
 
-```
+```javascript
 $ npm config set registry https://registry.npm.taobao.org
 -- 配置后可通过下面方式来验证是否成功
 $ npm config get registry
@@ -43,7 +43,7 @@ $ npm config get registry
 
 元素是构成 React 应用的最小单位，它用于描述屏幕上输出的内容。
 
-```
+```react
 const element = <h1>Hello, world!</h1>;
 ```
 
@@ -53,11 +53,11 @@ const element = <h1>Hello, world!</h1>;
 
 在此 div 中的所有内容都将由 React DOM 来管理，所以我们将其称为 "根" DOM 节点。
 
-```
+```react
 <div id="example"></div>
 ```
 
-```
+```react
 const element = <h1>Hello, world!</h1>;
 ReactDOM.render(    
 	element,
@@ -67,7 +67,7 @@ ReactDOM.render(
 
 ## 三、React   JSX
 
-```
+```react
 var myDivElement = <div className="foo" />;
 ReactDOM.render(myDivElement, document.getElementById('example'));
 ```
@@ -76,7 +76,7 @@ ReactDOM.render(myDivElement, document.getElementById('example'));
 
 ### 1.使用函数定义了一个组件
 
-```
+```react
 function HelloMessage(props) {
     return <h1>Hello World!</h1>;
 }
@@ -84,7 +84,7 @@ function HelloMessage(props) {
 
 ### 2.使用 class 定义一个组件
 
-```
+```react
 class Welcome extends React.Component {
   render() {
     return <h1>Hello World!</h1>;
@@ -96,7 +96,7 @@ class Welcome extends React.Component {
 
 如果我们需要向组件传递参数，可以使用 **this.props** 对象
 
-```
+```react
 function HelloMessage(props) {
     return <h1>Hello {props.name}!</h1>;
 }
@@ -113,7 +113,7 @@ ReactDOM.render(
 
 React 把组件看成是一个状态机（State Machines）。通过与用户的交互，实现不同状态，然后渲染 UI，让用户界面和数据保持一致。只需更新组件的 state，然后根据新的 state 重新渲染用户界面（不要操作 DOM）。
 
-```
+```react
 class Clock extends React.Component {
   constructor(props) {
     super(props);
@@ -138,7 +138,7 @@ ReactDOM.render(
 
 在具有许多组件的应用程序中，在销毁时释放组件所占用的资源非常重要。每当 Clock 组件第一次加载到 DOM 中的时候，我们都想生成定时器，这在 React 中被称为**挂载**。同样，每当 Clock 生成的这个 DOM 被移除的时候，我们也会想要清除定时器，这在 React 中被称为**卸载**。
 
-```
+```react
 class Clock extends React.Component {
   constructor(props) {
     super(props);
@@ -187,7 +187,7 @@ state 和 props 主要的区别在于 **props** 是不可变的，而 state 可�
 
 ### 1.State 和 Props
 
-```
+```react
 class WebSite extends React.Component {
   constructor() {
       super();
@@ -237,7 +237,7 @@ React 元素的事件处理和 DOM 元素类似。但是有一点语法上的不
 - React 事件绑定属性的命名采用驼峰式写法，而不是小写。
 - 如果采用 JSX 的语法你需要传入一个函数作为事件处理函数，而不是一个字符串(DOM 元素的写法)
 
-```
+```react
 class LoggingButton extends React.Component {
   // 这个语法确保了 `this` 绑定在  handleClick 中
   // 这里只是一个测试
@@ -262,7 +262,7 @@ class LoggingButton extends React.Component {
 
 创建一个 Greeting 组件，它会根据用户是否登录来显示其中之一：
 
-```
+```react
 function Greeting(props) {
   const isLoggedIn = props.isLoggedIn;
   if (isLoggedIn) {
@@ -279,7 +279,7 @@ ReactDOM.render(
 
 #### 与运算符 &&
 
-```
+```react
 function Mailbox(props) {
   const unreadMessages = props.unreadMessages;
   return (
@@ -305,11 +305,11 @@ ReactDOM.render(
 
 #### 三目运算符
 
-```
+```react
 condition ? true : false。
 ```
 
-```
+```react
 render() {
   const isLoggedIn = this.state.isLoggedIn;
   return (
@@ -328,7 +328,7 @@ render() {
 
 组件接收数组参数，每个列表元素分配一个 key。Keys 可以在 DOM 中的某些元素被增加或删除的时候帮助 React 识别哪些元素发生了变化。因此你应当给数组中的每一个元素赋予一个确定的标识。
 
-```
+```react
 function ListItem(props) {
   // 对啦！这里不需要指定key:
   return <li>{props.value}</li>;
