@@ -5,7 +5,7 @@ tags:
     - ajax 
 categories: ajax
 keywords: ajax
-cover: https://s1.ax1x.com/2020/09/30/0KSrLT.jpg
+cover: https://s3.ax1x.com/2021/01/06/sVHfgK.jpg
 ---
 
 ## 一、AJAX简介
